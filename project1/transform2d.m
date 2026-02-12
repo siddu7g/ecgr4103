@@ -1,4 +1,4 @@
-function outputImage = transform(inputImage, type, params)
+function outputImage = transform2d(inputImage, type, params)
 % TRANSFORM Performs spatial manipulations on image data.
 %   INPUTS:
 %   inputImage - The RGB image matrix (uint8 or double).
@@ -24,4 +24,5 @@ function outputImage = transform(inputImage, type, params)
         otherwise
             error('Unknown transformation type.');
     end
+
 end
