@@ -99,10 +99,10 @@ finalView = enhancedAsinh;
 
 % 2. Apply Reflection (Horizontal Flip)
 % Raw Hubble data is often mirrored relative to the sky-view
-finalView = transform(finalView, 'flipH', []);
+finalView = transform2d(finalView, 'flipH', []);
 
 % 3. Apply Rotation, try a 90-degree clockwise rotation
-finalView = transform(finalView, 'rotate', -90);
+finalView = transform2d(finalView, 'rotate', -90);
 
 % 4. Fine-Tune the Crop, centered on the lensing arcs.
 [rows, cols, ~] = size(finalView);
@@ -115,3 +115,4 @@ finalView = finalView(centerR-offset:centerR+offset, centerC-offset:centerC+offs
 figure('Name', 'Replicated Hubble Reference Image');
 imshow(finalView);
 title('Abell 1689: Replicated Press-Release Orientation');
+
